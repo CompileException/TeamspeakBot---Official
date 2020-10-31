@@ -1,0 +1,2 @@
+# TeamspeakBot
+ TeamspeakBot by Lucas

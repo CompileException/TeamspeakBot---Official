@@ -15,18 +15,20 @@ import com.github.theholywaffle.teamspeak3.api.reconnect.ReconnectStrategy;
 import com.github.theholywaffle.teamspeak3.api.wrapper.Client;
 
 public class TeamspeakBot {
+    /*
+    API Methods
+     */
 
     public static final TS3Config config = new TS3Config();
     public static final TS3Query query = new TS3Query(config);
     public static final TS3Api api = query.getApi();
-
 
     public static void main(String[] args) {
 
         /*
         CONFIG
          */
-        config.setHost("45.89.124.58");
+        config.setHost("IP");
         config.setQueryPort(10011);
 
         /*
@@ -34,11 +36,10 @@ public class TeamspeakBot {
          */
         query.connect();
 
-
         /*
         API
          */
-        api.login("serveradmin", "leFYYRBR");
+        api.login("NAME", "PASSWORD");
         api.selectVirtualServerByPort(9987);
         //api.selectVirtualServerById(1);
         api.setNickname(Datasave.botname);
